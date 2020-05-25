@@ -2,14 +2,14 @@ global cWidth
 global cHeight
 cWidth = 600
 cHeight = 600
-class player(object):
-    def __init__(self):
-        self.x = 1000
-        self.y = 1000
-        self.up = 0
-        self.down = 0
-        self.left = 0
-        self.right= 0
+class Player(object): # nazwa klasy zwyczajowo z dużej litery, a dziedziczenie po object jest wskazane w pythonie ver. 2
+    down = 0 # jako argument klasy będą wspólne dla wszystkich playerów - obiektów tej klasy
+    left = 0
+    right= 0
+    up   = 0
+    def __init__(self, x = 1000, y = 1000): #teraz są argumentami można je zmienić dla różnych playeró, a jeśli nie - zostaną defaultowe
+        self.x = x
+        self.y = y
         self.speed= 5
         self.h = 20
         self.w = 20
@@ -17,8 +17,8 @@ class player(object):
         fill(0)
         rect(self.x,self.y,self.w,self.h)
     def update(self):
-        self.x = self.x + (self.right - self.left)*self.speed
-        self.y = self.y + (self.down - self.up)*self.speed
+        self.x = self.x + (Player.right - Player.left)*self.speed
+        self.y = self.y + (Player.down - Player.up)*self.speed
         if not (self.x >= 0):
             self.x = 0
         if not (self.x <= (cWidth - self.w)):
@@ -31,30 +31,35 @@ class player(object):
 
 def setup():
     size(cWidth,cHeight)
-    global p
-    p = player()
+    global p1, p2
+    p1 = Player(200, 200) # miały być stworzone dwa obiekty, co zreztą uwidoczniłoby pewne problemy
+    p2 = Player()
     
 def draw():
     background(100)
-    p.show()
-    p.update()
+    p1.show()
+    p1.update()
+    p2.show()
+    p2.update()
     
 def keyPressed():
     if keyCode == UP:
-        p.up=1
+        Player.up=1
     if keyCode == DOWN:
-        p.down=1
+        Player.down=1
     if keyCode == LEFT:
-        p.left=1
+        Player.left=1
     if keyCode == RIGHT:
-        p.right=1
+        Player.right=1
         
 def keyReleased():
     if keyCode == UP:
-        p.up=0
+        Player.up=0
     if keyCode == DOWN:
-        p.down=0
+        Player.down=0
     if keyCode == LEFT:
-        p.left=0
+        Player.left=0
     if keyCode == RIGHT:
-        p.right=0
+        Player.right=0
+        
+# 1,75pkt
