@@ -1,35 +1,27 @@
 def setup():
 
     global img
-    size(1200/2, 1600/2) 
+    size(1200/2, 1600/2)
+    noFill()
 
 def draw():
  
     global img
     img = loadImage("wisz.png")
-
-    image(img, 50,100, 500,500) 
-
     try:
- 
+        image(img, 50,100, 500,500) 
         f = open("wisz.png")
         if f.name == 'wisz.png':
             raise Exception
 
 
-    except FileNotFoundError as e:
-        print(e)
-    except Exception as e:
+    except:
         print ("Error!")
         rect(20, 75,555,555)
-        fill (255,0,0,90)
+        stroke(255,0,0,90)
     
     else:
         rect(20, 75,555,555)
-        fill (0,0,255,90)
+        stroke(0,0,255,90)
 
-               
-
-    
-
-    
+# 0,25pkt i przeanalizuj co się pozmieniałam, że działa
