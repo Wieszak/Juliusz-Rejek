@@ -7,3 +7,8 @@ Prawnik: Art. 26. 3. Kierującemu pojazdem zabrania się wyprzedzania pojazdu na
 Wzorzec: Fasada
 
 Dlaczego: Poszkodowany wyraża się językiem potocznym dla każdego zrozumiałym, prawnik zaś jest specjalistą w swojej dziedzinie i tłumaczy skomplikowane procesy na łatwe polecenia.
+
+DLaczego tak: Użyłeś języka prawniczego, chociaż to cytat z artylkułu, a nie mówniene o regulacjach
+Dlaczego nie: Prawnik wie co jest potrzebne, ale nie załatwi tego sam, a przynajmniej nie wynika to z rozmowy, informuje o potrzebie poszkodowanego, jakby to on miał pozyskać dowody. W fasadzie wyspecjalizowana klasa po informcaji od tejprostszej robi całą skomplikowaną robotę nie karząc tej prostszej wchodzić w szczegóły.
+
+#1,25pkt
